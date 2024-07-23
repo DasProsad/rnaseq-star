@@ -45,7 +45,7 @@ gen_index "$genome" "$gtf" "$g_index"
 
 # Align paired-end reads
 cd "$fq_dir" || echo 'FastQ directory is not valid!'
-for fqs in S1_trimmed_R1.fastq.gz;
+for fqs in *fastq.gz;
 do
 	align_fq "$g_index" "$fqs"
 done
